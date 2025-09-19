@@ -23,6 +23,11 @@ public record SellerSignUpController(SellerRepository repository) {
 
         var seller = new Seller();
         seller.setEmail(command.email());
+<<<<<<< Updated upstream
+=======
+        seller.setUsername(command.username());
+
+>>>>>>> Stashed changes
         try {
             repository.save(seller);
         } catch (DataIntegrityViolationException exception) {
